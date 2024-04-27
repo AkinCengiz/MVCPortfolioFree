@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using MVCPortfolioFree.DataAccess.Contexts;
+
 namespace MVCPortfolioFree;
 
 public class Program
@@ -8,6 +11,10 @@ public class Program
 
 		// Add services to the container.
 		builder.Services.AddControllersWithViews();
+		builder.Services.AddDbContext<MvcPortfolioFreeContext>(options =>
+		{
+			options.UseSqlServer(builder.Configuration.GetConnectionString("SqlCon1"));
+		});
 
 		var app = builder.Build();
 
