@@ -57,17 +57,16 @@
  * # webfonts and iconfonts - (_document-setup.scss)
  *
  * ------------------------------------------------------------------- */
-
+/*
 @import url("iconic/css/iconmonstr-iconic-font.min.css");
-@import url("fonts.css");
+@import url("fonts.css");*/
 
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* ===================================================================
  * # base style overrides - (_document-setup.scss)
  *
  * ------------------------------------------------------------------- */
-
 html {
     font-size: 10px;
 }
@@ -84,7 +83,7 @@ html, body {
 
 body {
     background: #0a0809;
-    font-family: "librebaskerville-regular", serif;
+    font-family: "Roboto", serif;
     font-size: 1.6rem;
     line-height: 1.875;
     color: #5f5f5f;
@@ -217,11 +216,11 @@ em, i, strong, b {
 }
 
 em, i {
-    font-family: "librebaskerville-italic", serif;
+    font-family: "Roboto", serif;
 }
 
 strong, b {
-    font-family: "librebaskerville-bold", serif;
+    font-family: "Roboto", serif;
 }
 
 small {
@@ -273,7 +272,7 @@ blockquote cite a, blockquote cite a:visited {
 }
 
 abbr {
-    font-family: "librebaskerville-bold", serif;
+    font-family: "Roboto", serif;
     font-variant: small-caps;
     text-transform: lowercase;
     letter-spacing: .05rem;
@@ -438,7 +437,7 @@ table {
     border-width: 0;
     width: 100%;
     max-width: 100%;
-    font-family: "librebaskerville-regular", serif;
+    font-family: "Roboto", serif;
 }
 
 th, td {
@@ -1267,7 +1266,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .section-intro h1 {
-    font-family: "librebaskerville-bold", serif;
+    font-family: "Roboto", serif;
     font-size: 4.8rem;
     line-height: 1.375;
     margin-top: 0;
@@ -1797,7 +1796,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-content h1 {
-    font-family: "librebaskerville-bold", serif;
+    font-family: "Roboto", serif;
     color: #FFFFFF;
     font-size: 6rem;
     line-height: 1.35;
@@ -2642,7 +2641,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .testimonials-header h1 {
-    font-family: "librebaskerville-bold", serif;
+    font-family: "Roboto", serif;
     font-size: 4.2rem;
     margin-top: 0;
     color: #FFFFFF;
@@ -2928,7 +2927,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .stats__count {
-    font-family: "librebaskerville-bold", serif;
+    font-family: "Roboto", serif;
     font-size: 7.2rem;
     line-height: 1;
     color: #0D0A0B;
@@ -3613,7 +3612,7 @@ article.blog-single .blog-content {
 .page-header__title {
     color: #FFFFFF;
     position: relative;
-    font-family: "librebaskerville-bold", serif;
+    font-family: "Roboto", serif;
     font-size: 6.6rem;
     line-height: 1.227;
     margin-top: 0;
