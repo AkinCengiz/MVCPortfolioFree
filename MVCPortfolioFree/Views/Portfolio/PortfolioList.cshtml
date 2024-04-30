@@ -1,0 +1,52 @@
+﻿@model List<Portfolio>
+@{
+    ViewData["Title"] = "PortfolioList";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md">
+				<div class="card">
+					<div class="card-header">
+						<div class="card-title">Portfolyo Listesi</div>
+					</div>
+					<div class="card-body">
+						<div class="card-sub">
+							Bu panel yardımıyla portfolyo tablosu üzerinde ekleme, güncelleme, silme ve listeleme işlemleri yapabilirsiniz...
+						</div>
+						<table class="table mt-3">
+							<thead>
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">Başlık</th>
+								<th scope="col">Alt Başlık</th>
+								<th scope="col">Açıklama</th>
+								<th scope="col">Resim Yolu</th>
+								<th scope="col">URL</th>
+								<th scope="col">İşlemler</th>
+							</tr>
+							</thead>
+							<tbody>
+							@foreach (var portfolio in Model)
+							{
+								<tr>
+									<td>@portfolio.Id</td>
+									<td>@portfolio.Title</td>
+									<td>@portfolio.SubTitle</td>
+									<td>@portfolio.Description</td>
+									<td>@portfolio.ImageUrl</td>
+									<td>@portfolio.Url</td>
+										<td><a href="/Portfolio/UpdatePortfolio/@portfolio.Id" class="btn btn-success m-1"><i class="la la-edit"></i></a><a href="/Portfolio/DeletePortfolio/@portfolio.Id" class="btn btn-danger m-1"><i class="la la-eraser"></i></a></td>
+								</tr>
+							}
+							</tbody>
+						</table>
+						<a href="/Portfolio/CreatePortfolio/" class="btn btn-primary m-1">Deneyim Ekle</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

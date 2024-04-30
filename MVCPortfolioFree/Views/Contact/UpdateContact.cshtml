@@ -1,0 +1,65 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "UpdateContact";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md">
+				<div class="card">
+					<div class="card-header">
+						<div class="card-title">İletişim Güncelleme Paneli</div>
+					</div>
+					<form method="post">
+						<div class="card-body">
+							<div class="form-group">
+								<div class="col-md p-0">
+									<input type="hidden" asp-for="Id" id="contactid">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="title" class="col-md-3 col-form-label">Başlık</label>
+								<div class="col-md p-0">
+									<input type="text" class="form-control input-full" asp-for="Title" id="title" placeholder="Başlık giriniz..">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="description">Açıklama</label>
+								<textarea class="form-control" asp-for="Description" id="description" rows="5"></textarea>
+							</div>
+							<div class="form-group">
+								<label for="phone" class="col-md-3 col-form-label">Ünvan</label>
+								<div class="col-md p-0">
+									<input type="tel" class="form-control input-full" asp-for="Phone" id="phone" placeholder="Telefon numaranızı giriniz..">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="mobilephone" class="col-md-3 col-form-label">Ünvan</label>
+								<div class="col-md p-0">
+									<input type="tel" class="form-control input-full" asp-for="MobilePhone" id="mobilephone" placeholder="Cep telefon numaranızı giriniz..">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="email" class="col-md-3 col-form-label">Ünvan</label>
+								<div class="col-md p-0">
+									<input type="email" class="form-control input-full" asp-for="Email" id="email" placeholder="Eposta adresinizi giriniz..">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="email2" class="col-md-3 col-form-label">Ünvan</label>
+								<div class="col-md p-0">
+									<input type="email" class="form-control input-full" asp-for="Email2" id="email2" placeholder="Eposta adresinizi giriniz..">
+								</div>
+							</div>
+						</div>
+						<div class="card-action">
+							<button class="btn btn-success">Güncelle</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

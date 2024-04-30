@@ -1,0 +1,60 @@
+﻿@model Portfolio
+@{
+    ViewData["Title"] = "UpdatePortfolio";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md">
+				<div class="card">
+					<div class="card-header">
+						<div class="card-title">Portfolyo Güncelleme Paneli</div>
+					</div>
+					<form method="post">
+						<div class="card-body">
+							<div class="form-group">
+								<div class="col-md p-0">
+									<input type="hidden" class="form-control input-full" asp-for="Id" id="title">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="title">Başlık</label>
+								<div class="col-md p-0">
+									<input type="text" class="form-control input-full" asp-for="Title" id="title" placeholder="Başlık giriniz..">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="subtitle">Alt Başlık</label>
+								<div class="col-md p-0">
+									<input type="text" class="form-control input-full" asp-for="SubTitle" id="subtitle" placeholder="Alt başlık giriniz..">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="description">Açıklama</label>
+								<textarea class="form-control" asp-for="Description" id="description" rows="5"></textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="imageurl">Görsel Yolu</label>
+							<div class="col-md p-0">
+								<input type="text" class="form-control input-full" asp-for="ImageUrl" id="imageurl" placeholder="Görsel yolunu giriniz..">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="url">Görsel Yolu</label>
+							<div class="col-md p-0">
+								<input type="text" class="form-control input-full" asp-for="Url" id="url" placeholder="Adres yolunu giriniz..">
+							</div>
+						</div>
+						<div class="card-action">
+							<button class="btn btn-success">Güncelle</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

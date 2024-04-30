@@ -1,0 +1,46 @@
+﻿@model About
+@{
+    ViewData["Title"] = "About";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+<div class="content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md">
+				<div class="card">
+					<div class="card-header">
+						<div class="card-title">Deneyim Listesi</div>
+					</div>
+					<div class="card-body">
+						<div class="card-sub">
+							Bu panel yardımıyla deneyimler tablosu üzerinde ekleme, güncelleme, silme ve listeleme işlemleri yapabilirsiniz...
+						</div>
+						<table class="table mt-3">
+							<thead>
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">Adı Soyadı</th>
+								<th scope="col">Kısa Biyografi</th>
+								<th scope="col">Detay</th>
+								<th scope="col">İşlemler</th>
+							</tr>
+							</thead>
+							<tbody>
+							
+								<tr>
+									<td>@Model.Id</td>
+									<td>@Model.Title</td>
+									<td>@Model.Description</td>
+									<td>@Model.Detail</td>
+									<td><a href="/About/UpdateAbout/@Model.Id" class="btn btn-success m-1"><i class="la la-edit"></i></a></td>
+								</tr>
+							
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
